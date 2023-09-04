@@ -1,0 +1,53 @@
+/* Apply styles to the entire body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the albums container */
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style individual album cards */
+.album-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 18rem;
+}
+
+/* Style album images */
+.album-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style album titles */
+.album-title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Style artist and details */
+.album-artist {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Style song count and length */
+.album-details {
+    font-size: 14px;
+    color: #999;
+    margin: 5px 0;
+}
