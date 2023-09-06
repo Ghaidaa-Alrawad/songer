@@ -1,7 +1,7 @@
 body {
 font-family: 'Caveat', cursive;
     font-size: 24px;
-        background-color: #f0f0f0;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
@@ -34,18 +34,3 @@ font-family: 'Caveat', cursive;
     color: rgb(23, 107, 135);
 }
 
-/* splash container */
-.splashContainer {
-    text-align: center;
-    padding: 100px 0;
-}
-
-.splashContainer h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.splashContainer p {
-    font-size: 18px;
-    color: #666;
-}
