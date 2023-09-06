@@ -9,6 +9,8 @@ Songr is a web application that allows users to explore music albums and capital
 - Create a database and then add your properties to `applicaiton.properties` file 
 - Run the application 
 
+---
+
 ## Usage
 
 1. After running the application, open a web browser and go to `http://localhost:8080`
@@ -16,6 +18,8 @@ Songr is a web application that allows users to explore music albums and capital
 - `Hello Page` for a personalized greeting, by this rout `/hello`
 - `Capitalize Page` to capitalize words, by this rout `/capitalize/{word}`, here you can add any word you want to be capitalized
 - `Albums Page` to explore music albums, by this rout `/albums`, and here you as a user you can as many albums as you want
+
+---
 
 ### Testing output on CMD for lab11
 
