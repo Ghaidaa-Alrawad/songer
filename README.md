@@ -6,7 +6,8 @@ Songr is a web application that allows users to explore music albums and capital
 
 - Clone the repository
 - Navigate to the project directory
-- Write on your cmd gradlew test if you want to test it
+- Create a database and then add your properties to `applicaiton.properties` file 
+- Run the application 
 
 ## Usage
 
@@ -14,7 +15,7 @@ Songr is a web application that allows users to explore music albums and capital
 2. Use the navigation links to access the different pages:
 - `Hello Page` for a personalized greeting, by this rout `/hello`
 - `Capitalize Page` to capitalize words, by this rout `/capitalize/{word}`, here you can add any word you want to be capitalized
-- `Albums Page` to explore music albums, by this rout `/albums`
+- `Albums Page` to explore music albums, by this rout `/albums`, and here you as a user you can as many albums as you want
 
 ### Testing output on CMD for lab11
 

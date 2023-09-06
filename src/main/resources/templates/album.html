@@ -4,12 +4,29 @@
   <meta charset="UTF-8">
   <title>Albums Page</title>
   <link rel="stylesheet" href="/Css/album.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+<nav>
+  <div class="navContainer">
+    <ul>
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/hello" class="nav-link">Hello Page</a></li>
+      <li><a href="/capitalize/AddYourWordHere" class="nav-link">Capitalize your word Page</a><span class="nav-description"> Add your word after 'capitalize/' to rewrite it in Capitalized letters</span></li>
+      <li><a href="/albums" class="nav-link">Albums Page</a></li>
+    </ul>
+  </div>
+</nav>
+
+
 <div class="album-container">
-  <div th:each="album : ${albums}" class="album-card">
+  <div th:each="album : ${albums}" class="album-card" id="cardAlbum">
     <img th:src="${album.imgUrl}" alt="Album Cover" class="album-image">
-    <div>
+    <div >
       <h2 th:text="${album.title}" class="album-title"></h2>
       <p th:text="${album.artist}" class="album-artist"></p>
       <p th:text="'Songs: ' + ${album.songCount}" class="album-details"></p>
@@ -17,6 +34,42 @@
     </div>
   </div>
 </div>
-<a href="/">Return to main page</a>
+
+<!-- making a from so we get data from the user-->
+<form action="/albums/creat-album" method="POST" class="album-form">
+  <fieldset>
+    <legend>Add a new album</legend>
+
+    <div class="formDiv">
+      <label for="title" class="form-label">Title of the album</label>
+      <input type="text" name="title" id="title" class="form-input" required>
+
+      <br>
+
+      <label for="artist" class="form-label">Artist name</label>
+      <input type="text" name="artist" id="artist" class="form-input" required>
+
+      <br>
+
+      <label for="songCount" class="form-label">Song count</label>
+      <input type="number" name="songCount" id="songCount" class="form-input" required>
+
+      <br>
+
+      <label for="length" class="form-label">Length</label>
+      <input type="number" name="length" id="length" class="form-input" required>
+
+      <br>
+
+      <label for="imgUrl" class="form-label">Image URL</label>
+      <input type="text" name="imgUrl" id="imgUrl" class="form-input" required>
+
+      <br>
+
+      <button type="submit" class="form-button">Submit</button>
+    </div>
+  </fieldset>
+</form>
+
 </body>
 </html>

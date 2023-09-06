@@ -33,19 +33,3 @@ font-family: 'Caveat', cursive;
 .navContainer ul li a:hover {
     color: rgb(23, 107, 135);
 }
-
-/* splash container */
-.splashContainer {
-    text-align: center;
-    padding: 100px 0;
-}
-
-.splashContainer h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.splashContainer p {
-    font-size: 18px;
-    color: #666;
-}
