@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Songs Page</title>
+  <link rel="stylesheet" href="/Css/songs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="navContainer">
+    <ul>
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/hello" class="nav-link">Hello Page</a></li>
+      <li><a href="/capitalize/AddYourWordHere" class="nav-link">Capitalize your word Page</a><span class="nav-description"> Add your word after 'capitalize/' to rewrite it in Capitalized letters</span></li>
+      <li><a href="/albums" class="nav-link">Albums Page</a></li>
+      <li><a href="/songs" class="nav-link">Songs Page</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="song-container">
+  <div th:each="song : ${songs}" class="song-card">
+    <h2 th:text="${song.songTitle}"></h2>
+    <p th:text="'Song Length: ' + ${song.songLength} + ' seconds'"></p>
+    <p th:text="'Song Track Number: ' + ${song.songTrackNumber}"></p>
+  </div>
+</div>
+
+</body>
+</html>

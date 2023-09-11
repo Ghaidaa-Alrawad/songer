@@ -1,10 +1,8 @@
 package com.songer.songerWebApp.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -13,11 +11,15 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String title;
     private String artist;
     private int songCount;
     private int length;
     private String imgUrl;
+
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    private List<Song> songsList;
 
     public Album(String title, String artist, int songCount, int length, String imgUrl) {
         this.title = title;
@@ -75,5 +77,13 @@ public class Album {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public List<Song> getSongsList() {
+        return songsList;
+    }
+
+    public void setSongsList(List<Song> songsList) {
+        this.songsList = songsList;
     }
 }
