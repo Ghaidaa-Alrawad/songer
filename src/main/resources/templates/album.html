@@ -18,6 +18,7 @@
       <li><a href="/hello" class="nav-link">Hello Page</a></li>
       <li><a href="/capitalize/AddYourWordHere" class="nav-link">Capitalize your word Page</a><span class="nav-description"> Add your word after 'capitalize/' to rewrite it in Capitalized letters</span></li>
       <li><a href="/albums" class="nav-link">Albums Page</a></li>
+      <li><a href="/songs" class="nav-link">Songs Page</a></li>
     </ul>
   </div>
 </nav>
@@ -32,10 +33,11 @@
       <p th:text="'Songs: ' + ${album.songCount}" class="album-details"></p>
       <p th:text="'Length: ' + ${album.length} + ' minutes'" class="album-details"></p>
     </div>
+    <a th:href="@{/albums/{id}(id=${album.id})}" class="album-details" style="font-size: 20px;" id="details">View Details</a>
   </div>
 </div>
 
-<!-- making a from so we get data from the user-->
+<!-- making a from so we get album data from the user-->
 <form action="/albums/creat-album" method="POST" class="album-form">
   <fieldset>
     <legend>Add a new album</legend>
@@ -63,6 +65,40 @@
 
       <label for="imgUrl" class="form-label">Image URL</label>
       <input type="text" name="imgUrl" id="imgUrl" class="form-input" required>
+
+      <br>
+
+      <button type="submit" class="form-button">Submit</button>
+    </div>
+  </fieldset>
+</form>
+
+<!-- making a from so we get song data from the user-->
+<form action="/add-song" method="POST" class="song-form">
+  <fieldset>
+    <legend>Add Song</legend>
+
+    <div class="formDiv">
+      <label for="songTitle" class="form-label">Song Title</label>
+      <input type="text" name="songTitle" id="songTitle" class="form-input" required>
+
+      <br>
+
+      <label for="songLength" class="form-label">Song Length</label>
+      <input type="text" name="songLength" id="songLength" class="form-input" required>
+
+      <br>
+
+      <label for="songTrackNumber" class="form-label">Song count</label>
+      <input type="number" name="songTrackNumber" id="songTrackNumber" class="form-input" required>
+
+      <br>
+
+      <!-- Hidden input for albumId -->
+      <label for="albumId" class="form-label">Select an Album</label>
+      <select id="albumId" name="albumId" class="form-input" required>
+        <option th:each="album : ${albums}" th:value="${album.id}" th:text="${album.title}"></option>
+      </select>
 
       <br>
 

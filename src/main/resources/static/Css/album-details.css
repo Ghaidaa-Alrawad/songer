@@ -1,0 +1,68 @@
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navContainer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navContainer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navContainer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navContainer ul li a:hover {
+    color: rgb(23, 107, 135);
+}
+
+.main-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+album-details-container {
+    padding: 20px;
+    margin-right: 200px;
+}
+
+.album-img {
+    margin-right: 200px;
+    float: left;
+    margin-left: 100px;
+}
+
+.album-details-text {
+    margin-top: 0;
+    margin-right: 100px;
+}
+
+.song-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.song-list li {
+    margin-bottom: 10px;
+}
