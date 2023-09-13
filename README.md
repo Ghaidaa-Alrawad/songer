@@ -1,6 +1,13 @@
 # Songr Web Application
 
-Songr is a web application that allows users to explore music albums and capitalize words. It includes several routes to access different functionalities.
+Songr is a web application that allows users to :
+
+- Explore music albums and capitalize words.
+- Add new Albums.
+- Add new Songs to a specific album
+- Can Explore all the songs in the app 
+- Can view a specific album and see all the details about it as well as the songs that is in this album
+- It includes several routes to access different functionalities.
 
 ## Getting Started
 
@@ -26,3 +33,8 @@ Songr is a web application that allows users to explore music albums and capital
 ### Testing output on CMD for lab11
 
 ![](img/testingOutputLab11.png)
+
+
+### Testing output on CMD for lab13
+
+![](img/testLab13.png)
